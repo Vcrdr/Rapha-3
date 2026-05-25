@@ -179,7 +179,7 @@ body::after {
   background: transparent;
   cursor: pointer;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.25rem, 3.9vw, 2.8rem);
+  font-size: clamp(1rem, 1.55vw, 1.45rem);
   line-height: 1.08;
   text-align: center;
   text-shadow:
@@ -190,15 +190,24 @@ body::after {
 .open-letter > span:last-of-type {
   position: absolute;
   left: 50%;
-  bottom: 18%;
-  width: min(78%, 430px);
+  bottom: 8%;
+  z-index: 2;
+  width: min(88%, 520px);
+  padding: 0.48em 0.9em;
+  border: 1px solid rgba(235, 214, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(33, 12, 57, 0.48);
+  box-shadow:
+    0 0 18px rgba(215, 184, 255, 0.28),
+    inset 0 0 18px rgba(255, 255, 255, 0.045);
+  white-space: nowrap;
   transform: translateX(-50%);
 }
 
 .open-letter::after {
   position: absolute;
   left: 50%;
-  bottom: 5%;
+  bottom: -7%;
   width: 86px;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -448,12 +457,13 @@ body::after {
   }
 
   .open-letter {
-    font-size: clamp(1.25rem, 6.6vw, 2.2rem);
+    font-size: clamp(0.95rem, 4.6vw, 1.45rem);
   }
 
   .open-letter > span:last-of-type {
-    bottom: 17%;
-    width: 76%;
+    bottom: 7%;
+    width: 82%;
+    white-space: normal;
   }
 
   .letter-panel {
