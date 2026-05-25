@@ -137,8 +137,8 @@ body::after {
 }
 
 .envelope-paper {
-  inset: 8% 7% auto;
-  height: 74%;
+  inset: -3% 7% auto;
+  height: 82%;
   border: 1px solid rgba(106, 54, 138, 0.16);
   border-radius: 10px;
   background:
@@ -175,8 +175,10 @@ body::after {
   inset: 0;
   z-index: 7;
   display: grid;
-  gap: 12px;
-  place-items: center;
+  gap: 10px;
+  grid-template-rows: auto auto auto;
+  align-content: end;
+  justify-items: center;
   border: 0;
   color: #fffaff;
   background: transparent;
@@ -184,11 +186,15 @@ body::after {
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1.65rem, 5vw, 3.9rem);
   line-height: 1.08;
-  padding: 8%;
+  padding: 8% 8% 9%;
   text-align: center;
   text-shadow:
     0 0 18px rgba(215, 184, 255, 0.75),
     0 0 34px rgba(255, 155, 214, 0.32);
+}
+
+.open-letter > span:last-of-type {
+  transform: translateY(12px);
 }
 
 .open-letter::after {
@@ -214,14 +220,14 @@ body::after {
 
 .letter-panel {
   position: absolute;
-  top: 46%;
+  top: 42%;
   left: 50%;
   z-index: 10;
   width: min(86vw, 500px);
   max-height: calc(100svh - 52px);
   opacity: 0;
   pointer-events: none;
-  transform: translate(-50%, -36%) scale(0.92);
+  transform: translate(-50%, -42%) scale(0.92);
   transition: opacity 0.55s ease, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -315,7 +321,7 @@ body::after {
 .gift.is-open .letter-panel {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, -52%) scale(1);
+  transform: translate(-50%, -58%) scale(1);
 }
 
 .flower {
@@ -440,12 +446,12 @@ body::after {
   }
 
   .letter-panel {
-    top: 45%;
+    top: 42%;
     width: min(90vw, 390px);
   }
 
   .gift.is-open .letter-panel {
-    transform: translate(-50%, -54%) scale(1);
+    transform: translate(-50%, -58%) scale(1);
   }
 
   .gift.is-open .envelope {
