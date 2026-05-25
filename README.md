@@ -1,6 +1,5 @@
 # Florescendo para você
 
-Site romântico de página única com estética cyberpunk fofa, fundo escuro, partículas suaves e buquê animado florescendo.
 
 ## Arquivos
 
