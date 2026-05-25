@@ -93,6 +93,10 @@ body::after {
   display: none;
 }
 
+#envelope-front:checked ~ .message-container .envelope-front {
+  pointer-events: none;
+}
+
 #envelope-flap:checked ~ .message-container {
   --flap-rotation: 180deg;
 }
@@ -101,9 +105,13 @@ body::after {
   display: none;
 }
 
+#envelope-flap:checked ~ .message-container .envelope-flap {
+  pointer-events: none;
+}
+
 #envelope-flap:checked ~ .message-container .letter-wrap {
   opacity: 1;
-  transform: translateX(-50%) translateY(-34%);
+  transform: translateX(-50%) translateY(-30%);
 }
 
 #envelope-flap:checked ~ .message-container .envelope-pocket {
@@ -111,16 +119,23 @@ body::after {
 }
 
 #letter-open:checked ~ .message-container {
-  --letter-rise: -36%;
   --letter-rotation: 180deg;
 }
 
 #letter-open:checked ~ .message-container .letter-wrap {
-  z-index: 6;
-  transform: translateX(-50%) translateY(-62%);
+  z-index: 12;
+  width: min(86%, 520px);
+  height: min(112%, 470px);
+  transform: translateX(-50%) translateY(-70%);
 }
 
 #letter-open:checked ~ .message-container .letter-fold {
+  pointer-events: none;
+}
+
+#letter-open:checked ~ .message-container .envelope-flap,
+#letter-open:checked ~ .message-container .envelope-pocket {
+  opacity: 0.42;
   pointer-events: none;
 }
 
@@ -144,8 +159,8 @@ body::after {
 
 .message-container {
   position: relative;
-  width: min(92vmin, 760px);
-  aspect-ratio: 1 / 0.72;
+  width: min(90vmin, 700px);
+  aspect-ratio: 1 / 0.68;
   perspective: 130vmin;
   transform-style: preserve-3d;
 }
@@ -173,7 +188,7 @@ label {
   color: #fff9fd;
   background:
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.14) 0 1px, transparent 1px 7px),
-    linear-gradient(135deg, rgba(123, 23, 72, 0.96), rgba(40, 13, 74, 0.96) 58%, rgba(15, 66, 142, 0.94));
+    linear-gradient(135deg, rgba(102, 25, 68, 0.96), rgba(38, 18, 66, 0.96) 58%, rgba(17, 55, 104, 0.94));
   box-shadow:
     0 0 28px rgba(255, 143, 199, 0.28),
     0 0 52px rgba(37, 216, 255, 0.18),
@@ -223,8 +238,8 @@ label {
 
 .envelope-face {
   background:
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0 1px, transparent 1px 7px),
-    linear-gradient(135deg, #3f1231, #251044 54%, #0b326d);
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.075) 0 1px, transparent 1px 8px),
+    linear-gradient(135deg, #4f173a, #25123e 54%, #123967);
   box-shadow:
     0 0 26px rgba(37, 216, 255, 0.18),
     inset 0 0 30px rgba(255, 255, 255, 0.07);
@@ -233,23 +248,23 @@ label {
 .envelope-pocket {
   z-index: 5;
   pointer-events: none;
-  clip-path: polygon(0 32%, 50% 70%, 100% 32%, 100% 100%, 0 100%);
+  clip-path: polygon(0 38%, 50% 78%, 100% 38%, 100% 100%, 0 100%);
   background:
     linear-gradient(145deg, rgba(255, 143, 199, 0.2), transparent 34%),
     linear-gradient(215deg, rgba(37, 216, 255, 0.18), transparent 38%),
-    linear-gradient(135deg, #5e1744, #1c123d 64%, #0c3674);
+    linear-gradient(135deg, #5f1b45, #211541 64%, #123b6b);
   box-shadow: inset 0 0 32px rgba(255, 255, 255, 0.06);
 }
 
 .envelope-flap {
   z-index: 7;
-  height: 52%;
+  height: 47%;
   transform: rotateX(var(--flap-rotation));
   transform-origin: top center;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   background:
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.13) 0 1px, transparent 1px 6px),
-    linear-gradient(135deg, #8b2255, #32145c 58%, #1554a6);
+    linear-gradient(135deg, #7d2454, #321956 58%, #1b5f9e);
   box-shadow:
     0 0 22px rgba(255, 143, 199, 0.28),
     inset 0 0 22px rgba(255, 255, 255, 0.08);
@@ -258,11 +273,11 @@ label {
 
 .letter-wrap {
   position: absolute;
-  bottom: 10%;
+  bottom: 7%;
   left: 50%;
   z-index: 3;
-  width: 78%;
-  height: 72%;
+  width: 72%;
+  height: 68%;
   opacity: 0;
   perspective: 120vmin;
   transform: translateX(-50%) translateY(4%);
@@ -288,8 +303,8 @@ label {
   place-items: center;
   color: #fff;
   background:
-    repeating-linear-gradient(0deg, rgba(37, 216, 255, 0.1) 0 1px, transparent 1px 8px),
-    linear-gradient(135deg, #fff7fb, #ffd5ea 54%, #cfefff);
+    repeating-linear-gradient(0deg, rgba(123, 23, 72, 0.09) 0 1px, transparent 1px 22px),
+    linear-gradient(135deg, #fffafd, #fff1f8 62%, #ecfbff);
   color: var(--wine);
   font-size: clamp(1.8rem, 6vmin, 4rem);
   text-shadow: 0 0 14px rgba(255, 143, 199, 0.34);
@@ -312,21 +327,33 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: clamp(9px, 1.7vmin, 16px);
-  padding: clamp(18px, 4vmin, 36px);
+  gap: clamp(10px, 1.8vmin, 17px);
+  padding: clamp(22px, 4.4vmin, 42px);
   color: var(--text);
   background:
-    repeating-linear-gradient(0deg, rgba(37, 216, 255, 0.08) 0 1px, transparent 1px 8px),
-    radial-gradient(circle at 16% 18%, rgba(255, 143, 199, 0.18), transparent 28%),
-    linear-gradient(145deg, rgba(255, 250, 253, 0.98), rgba(255, 229, 243, 0.98) 58%, rgba(226, 249, 255, 0.98));
+    repeating-linear-gradient(0deg, transparent 0 25px, rgba(123, 23, 72, 0.12) 26px 27px),
+    radial-gradient(circle at 16% 18%, rgba(255, 143, 199, 0.14), transparent 28%),
+    radial-gradient(circle at 92% 10%, rgba(37, 216, 255, 0.12), transparent 28%),
+    linear-gradient(145deg, rgba(255, 252, 254, 0.99), rgba(255, 245, 250, 0.99) 62%, rgba(241, 252, 255, 0.99));
   box-shadow:
     0 20px 58px rgba(0, 0, 0, 0.28),
-    0 0 34px rgba(255, 143, 199, 0.24),
-    inset 0 0 30px rgba(255, 255, 255, 0.46);
+    0 0 20px rgba(255, 143, 199, 0.22),
+    0 0 28px rgba(37, 216, 255, 0.14),
+    inset 0 0 30px rgba(255, 255, 255, 0.52);
   font-family: "Segoe UI", system-ui, sans-serif;
-  font-size: clamp(0.98rem, 2.35vmin, 1.42rem);
+  font-size: clamp(0.96rem, 2.18vmin, 1.28rem);
   line-height: 1.45;
   transform: none;
+}
+
+.letter::before {
+  position: absolute;
+  top: 0;
+  left: clamp(22px, 4vmin, 38px);
+  width: 1px;
+  height: 100%;
+  content: "";
+  background: rgba(255, 143, 199, 0.22);
 }
 
 .letter-title {
@@ -338,6 +365,7 @@ label {
 
 .flower-trigger {
   position: relative;
+  z-index: 4;
   align-self: center;
   margin-top: clamp(2px, 1vmin, 10px);
   padding: 0.74em 1.4em;
