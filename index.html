@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Uma página romântica cyberpunk fofa com flores desabrochando."
+    />
+    <title>Florescendo para você</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <main class="experience" aria-live="polite">
+      <section class="intro" id="intro">
+        <p class="intro__line">Tem algo florescendo para você...</p>
+        <button class="open-button" id="openButton" type="button">
+          <span>Abrir</span>
+        </button>
+      </section>
+
+      <section class="bloom-scene" id="bloomScene" aria-hidden="true">
+        <div class="soft-orbit orbit-one"></div>
+        <div class="soft-orbit orbit-two"></div>
+
+        <div class="doodles" aria-hidden="true">
+          <span class="doodle heart">♡</span>
+          <span class="doodle sparkle">✦</span>
+          <span class="doodle bow">⌁</span>
+          <span class="doodle moon">☾</span>
+          <span class="doodle plus">✧</span>
+          <span class="doodle tiny-heart">♥</span>
+        </div>
+
+        <div class="bouquet" aria-label="Buquê de flores desabrochando">
+          <div class="stem stem-left"></div>
+          <div class="stem stem-center"></div>
+          <div class="stem stem-right"></div>
+          <div class="stem stem-soft-left"></div>
+          <div class="stem stem-soft-right"></div>
+
+          <div class="leaf leaf-left"></div>
+          <div class="leaf leaf-right"></div>
+          <div class="leaf leaf-small-left"></div>
+          <div class="leaf leaf-small-right"></div>
+
+          <div class="flower flower-left">
+            <span class="petal p1"></span>
+            <span class="petal p2"></span>
+            <span class="petal p3"></span>
+            <span class="petal p4"></span>
+            <span class="petal p5"></span>
+            <span class="core"></span>
+          </div>
+
+          <div class="flower flower-center">
+            <span class="petal p1"></span>
+            <span class="petal p2"></span>
+            <span class="petal p3"></span>
+            <span class="petal p4"></span>
+            <span class="petal p5"></span>
+            <span class="petal p6"></span>
+            <span class="core"></span>
+          </div>
+
+          <div class="flower flower-right">
+            <span class="petal p1"></span>
+            <span class="petal p2"></span>
+            <span class="petal p3"></span>
+            <span class="petal p4"></span>
+            <span class="petal p5"></span>
+            <span class="core"></span>
+          </div>
+
+          <div class="flower flower-tiny">
+            <span class="petal p1"></span>
+            <span class="petal p2"></span>
+            <span class="petal p3"></span>
+            <span class="petal p4"></span>
+            <span class="core"></span>
+          </div>
+
+          <div class="ribbon">
+            <span></span>
+          </div>
+        </div>
+
+        <p class="final-message" id="finalMessage">
+          Assim como essas flores, meu amor por você floresce mais todos os dias.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
