@@ -5,90 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Uma carta romântica interativa com flores em estilo cyberpunk fofo."
+      content="Uma carta romântica fofa e tecnológica em tons de roxo."
     />
     <title>Um presente para você</title>
-    <link rel="stylesheet" href="styles.css?v=simple-cyber-letter-5" />
+    <link rel="stylesheet" href="styles.css?v=purple-cute-tech-6" />
   </head>
   <body>
     <canvas id="particles" aria-hidden="true"></canvas>
 
-    <main class="stage">
-      <input type="checkbox" id="envelope-front" class="hidden-control" />
-      <input type="checkbox" id="envelope-flap" class="hidden-control" />
-      <input type="checkbox" id="letter-open" class="hidden-control" />
-      <input type="checkbox" id="flowers-open" class="hidden-control" />
+    <div class="background-doodles" aria-hidden="true">
+      <span>♡</span>
+      <span>✦</span>
+      <span>⌁</span>
+      <span>✧</span>
+      <span>☾</span>
+      <span>♡</span>
+      <span>✦</span>
+      <span>⌁</span>
+    </div>
 
-      <section class="message-container" aria-label="Carta romântica interativa">
-        <label for="envelope-front" class="envelope envelope-front">
-          <span class="bird">♡</span>
-          <span>Um passarinho deixou isso para você...</span>
-        </label>
-        <div class="tap-rings envelope-front-rings" aria-hidden="true">
-          <span></span>
-          <span></span>
-          <span></span>
+    <main class="scene" aria-live="polite">
+      <section class="gift" id="gift">
+        <div class="letter-panel" id="letterPanel">
+          <article class="letter">
+            <p class="letter-title">Amor,</p>
+            <p>Só queria te agradecer por tornar tudo tão incrível.</p>
+            <p>
+              Você trouxe de volta o meu sorriso mais brilhante e uma felicidade
+              que eu nem sabia o quanto sentia falta.
+            </p>
+            <p>Sou muito grata por ter você comigo. 🤍</p>
+
+            <button class="bloom-button" id="bloomButton" type="button">
+              florescer
+            </button>
+          </article>
         </div>
 
-        <div class="envelope-back">
-          <div class="envelope-face"></div>
+        <div class="envelope" aria-label="Envelope com uma carta">
+          <div class="envelope-back"></div>
+          <div class="envelope-paper"></div>
+          <div class="envelope-flap"></div>
+          <div class="envelope-pocket"></div>
 
-          <label for="envelope-flap" class="envelope-flap" aria-label="Abrir envelope"></label>
-          <div class="tap-rings flap-rings" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-
-          <div class="letter-wrap">
-            <label for="letter-open" class="letter-fold" aria-label="Abrir carta">
-              <span>abrir</span>
-            </label>
-
-            <article class="letter">
-              <p class="letter-title">Amor,</p>
-              <p>Só queria te agradecer por tornar tudo tão incrível.</p>
-              <p>
-                Você trouxe de volta o meu sorriso mais brilhante e uma
-                felicidade que eu nem sabia o quanto sentia falta.
-              </p>
-              <p>Sou muito grata por ter você comigo. 🤍</p>
-
-              <label for="flowers-open" class="flower-trigger">
-                florescer
-                <span class="tap-rings flower-rings" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </span>
-              </label>
-            </article>
-          </div>
-
-          <label for="letter-open" class="envelope-pocket" aria-label="Puxar carta"></label>
+          <button class="open-letter" id="openLetter" type="button">
+            <span class="bird">♡</span>
+            <span>Um passarinho deixou isso para você...</span>
+          </button>
         </div>
 
-        <div class="flower field-rose rose-one" style="--x: 12%; --y: 8%; --s: 0.86; --r: -18deg;">
-          <i></i><i></i><i></i><i></i><i></i><b></b>
-        </div>
-        <div class="flower field-rose rose-two" style="--x: 83%; --y: 10%; --s: 0.78; --r: 16deg;">
-          <i></i><i></i><i></i><i></i><i></i><b></b>
-        </div>
-        <div class="flower field-rose rose-three" style="--x: 16%; --y: 78%; --s: 0.7; --r: 22deg;">
-          <i></i><i></i><i></i><i></i><i></i><b></b>
-        </div>
-        <div class="flower field-rose rose-four" style="--x: 78%; --y: 82%; --s: 0.76; --r: -24deg;">
-          <i></i><i></i><i></i><i></i><i></i><b></b>
-        </div>
-        <div class="flower field-rose rose-five" style="--x: 50%; --y: -2%; --s: 0.62; --r: 8deg;">
-          <i></i><i></i><i></i><i></i><i></i><b></b>
-        </div>
-        <div class="flower field-rose rose-six" style="--x: 51%; --y: 96%; --s: 0.66; --r: -10deg;">
-          <i></i><i></i><i></i><i></i><i></i><b></b>
-        </div>
+        <div class="flower flower-one"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="flower flower-two"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="flower flower-three"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="flower flower-four"><i></i><i></i><i></i><i></i><i></i><b></b></div>
+        <div class="flower flower-five"><i></i><i></i><i></i><i></i><i></i><b></b></div>
       </section>
     </main>
 
-    <script src="script.js?v=simple-cyber-letter-5"></script>
+    <script src="script.js?v=purple-cute-tech-6"></script>
   </body>
 </html>
