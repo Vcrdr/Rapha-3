@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Mother&#39;s day animation (pure css)</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <section>
+    <input type="checkbox" id="enveloppe-front" class="hidden">
+    <input type="checkbox" id="enveloppe-tab" class="hidden">
+    <input type="checkbox" id="enveloppe-back" class="hidden">
+    <input type="checkbox" id="letter-folded" class="hidden">
+    <input type="checkbox" id="open-flowers" class="hidden">
+
+    <div class="message-container">
+
+        <label for="enveloppe-front" class="enveloppe enveloppe-label-front">
+            Pour Maman ...
+        </label>
+
+        <div class="enveloppe-front-cta cta">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="enveloppe-back-container">
+
+            <label for="enveloppe-tab" class="enveloppe-label-tab">
+            </label>
+            <div class="enveloppe-tab-cta cta">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="enveloppe enveloppe-front-backface"></div>
+
+            <div class="letter-container">
+                <div class="letter-top-container">
+                    <label for="letter-folded" class="letter-top letter-folded-label">
+                    </label>
+                    <div class="letter-folded-cta cta">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="letter-top letter-top-back">
+                        <div>Derrière mon dos ?</div>
+                        <div>Non, ce n'est pas une tache, ni un accroc.</div>
+                        <div>Ce ne sont pas des mains sales, ni un trou ovale.</div>
+                    </div>
+                </div>
+                <div class="letter-bottom">
+                    <div>Ce sont des
+                        <div class="flowers">
+                            <label for="open-flowers">fleurs</label>
+                            <div class="open-flowers-cta cta">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div> de mai
+                    </div>
+                    <div>Qui ne faneront jamais.</div>
+                    <div>Bonne fête maman.</div>
+                    <!-- <div class="signature">Maxime</div> -->
+                </div>
+
+            </div>
+
+            <label for="enveloppe-back" class="enveloppe enveloppe-label-back"></label>
+
+            <div class="enveloppe-back-cta cta">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+
+        <div class="flower 9petals" style="
+            --pos-top: 5%;
+            --pos-left: 10%;
+            --flower-width: 5vmin;
+            --open-rotation: 80deg;
+            --displayed-delay: .5s;
+            --heart-width: 120%;
+            --petal-color: #A50507;
+            --petal-height: 150%;
+            --heart-color: #FFC116;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 40deg;"></div>
+            <div class="petal" style="--petal-rot: 80deg;"></div>
+            <div class="petal" style="--petal-rot: 120deg;"></div>
+            <div class="petal" style="--petal-rot: 160deg;"></div>
+            <div class="petal" style="--petal-rot: 200deg;"></div>
+            <div class="petal" style="--petal-rot: 240deg;"></div>
+            <div class="petal" style="--petal-rot: 280deg;"></div>
+            <div class="petal" style="--petal-rot: 320deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+
+        <div class="flower 9petals" style="
+            --pos-top: 95%;
+            --pos-left: 72%;
+            --flower-width: 4vmin;
+            --open-rotation: 40deg;
+            --displayed-delay: 1.75s;
+            --heart-width: 150%;
+            --petal-color: #F0CD71;
+            --petal-height: 200%;
+            --heart-color: #7A3410;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 40deg;"></div>
+            <div class="petal" style="--petal-rot: 80deg;"></div>
+            <div class="petal" style="--petal-rot: 120deg;"></div>
+            <div class="petal" style="--petal-rot: 160deg;"></div>
+            <div class="petal" style="--petal-rot: 200deg;"></div>
+            <div class="petal" style="--petal-rot: 240deg;"></div>
+            <div class="petal" style="--petal-rot: 280deg;"></div>
+            <div class="petal" style="--petal-rot: 320deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+
+        <div class="flower 9petals" style="
+            --pos-top: 15%;
+            --pos-left: 87%;
+            --flower-width: 4vmin;
+            --open-rotation: 100deg;
+            --displayed-delay: 0s;
+            --heart-width: 80%;
+            --petal-color: #930712;
+            --petal-height: 110%;
+            --heart-color: #E08803;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 40deg;"></div>
+            <div class="petal" style="--petal-rot: 80deg;"></div>
+            <div class="petal" style="--petal-rot: 120deg;"></div>
+            <div class="petal" style="--petal-rot: 160deg;"></div>
+            <div class="petal" style="--petal-rot: 200deg;"></div>
+            <div class="petal" style="--petal-rot: 240deg;"></div>
+            <div class="petal" style="--petal-rot: 280deg;"></div>
+            <div class="petal" style="--petal-rot: 320deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+
+        <div class="flower 7petals" style="
+            --pos-top: 60%;
+            --pos-left: 15%;
+            --flower-width: 5vmin;
+            --open-rotation: 80deg;
+            --displayed-delay: 1s;
+            --heart-width: 110%;
+            --petal-color: #F0BCE0;
+            --petal-height: 150%;
+            --heart-color: #B9022E;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 51.43deg;"></div>
+            <div class="petal" style="--petal-rot: 102.86deg;"></div>
+            <div class="petal" style="--petal-rot: 154.29deg;"></div>
+            <div class="petal" style="--petal-rot: 205.71deg;"></div>
+            <div class="petal" style="--petal-rot: 257.14deg;"></div>
+            <div class="petal" style="--petal-rot: 308.57deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+
+        <div class="flower 7petals" style="
+            --pos-top: 70%;
+            --pos-left: 87%;
+            --flower-width: 2.5vmin;
+            --open-rotation: 180deg;
+            --displayed-delay: 1.25s;
+            --heart-width: 100%;
+            --petal-color: #A01081;
+            --petal-height: 175%;
+            --heart-color: #DE5DDC;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 51.43deg;"></div>
+            <div class="petal" style="--petal-rot: 102.86deg;"></div>
+            <div class="petal" style="--petal-rot: 154.29deg;"></div>
+            <div class="petal" style="--petal-rot: 205.71deg;"></div>
+            <div class="petal" style="--petal-rot: 257.14deg;"></div>
+            <div class="petal" style="--petal-rot: 308.57deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+
+        <div class="flower 7petals" style="
+            --pos-top: 0%;
+            --pos-left: 75%;
+            --flower-width: 5.5vmin;
+            --open-rotation: 67deg;
+            --displayed-delay: .25s;
+            --heart-width: 100%;
+            --petal-color: #7945E8;
+            --petal-height: 150%;
+            --heart-color: #D9B41D;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 51.43deg;"></div>
+            <div class="petal" style="--petal-rot: 102.86deg;"></div>
+            <div class="petal" style="--petal-rot: 154.29deg;"></div>
+            <div class="petal" style="--petal-rot: 205.71deg;"></div>
+            <div class="petal" style="--petal-rot: 257.14deg;"></div>
+            <div class="petal" style="--petal-rot: 308.57deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+
+        <div class="flower 5petals" style="
+            --pos-top: -5%;
+            --pos-left: 25%;
+            --flower-width: 4.5vmin;
+            --open-rotation: 120deg;
+            --displayed-delay: .75s;
+            --heart-width: 100%;
+            --petal-color: #542FA1;
+            --petal-height: 150%;
+            --heart-color: #EBDF65;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 72deg;"></div>
+            <div class="petal" style="--petal-rot: 144deg;"></div>
+            <div class="petal" style="--petal-rot: 216deg;"></div>
+            <div class="petal" style="--petal-rot: 288deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+
+        <div class="flower 5petals" style="
+            --pos-top: 95%;
+            --pos-left: 22.5%;
+            --flower-width: 4vmin;
+            --open-rotation: 80deg;
+            --displayed-delay: 1.5s;
+            --heart-width: 100%;
+            --petal-color: #FC7E34;
+            --petal-height: 150%;
+            --heart-color: #C6181A;">
+            <div class="petal" style="--petal-rot: 0deg;"></div>
+            <div class="petal" style="--petal-rot: 72deg;"></div>
+            <div class="petal" style="--petal-rot: 144deg;"></div>
+            <div class="petal" style="--petal-rot: 216deg;"></div>
+            <div class="petal" style="--petal-rot: 288deg;"></div>
+            <div class="flower-heart"></div>
+        </div>
+    </div>
+</section>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
