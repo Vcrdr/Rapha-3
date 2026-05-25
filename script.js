@@ -39,7 +39,7 @@ function makeParticle(fromCenter) {
     speedX: (Math.random() - 0.5) * (fromCenter ? 1.25 : 0.18),
     speedY: (Math.random() - 0.5) * (fromCenter ? 1.25 : 0.18) - 0.08,
     alpha: Math.random() * 0.52 + 0.18,
-    hue: Math.random() > 0.55 ? "rose" : Math.random() > 0.36 ? "violet" : "silver",
+    hue: Math.random() > 0.58 ? "cyan" : Math.random() > 0.28 ? "blue" : Math.random() > 0.14 ? "violet" : "rose",
     pulse: Math.random() * Math.PI * 2,
     twinkle: Math.random() * 0.018 + 0.006,
   };
@@ -47,8 +47,10 @@ function makeParticle(fromCenter) {
 
 function particleColor(particle, alpha) {
   const colors = {
-    rose: `rgba(255, 143, 199, ${alpha})`,
+    cyan: `rgba(49, 231, 255, ${alpha})`,
+    blue: `rgba(31, 123, 255, ${alpha})`,
     violet: `rgba(155, 108, 255, ${alpha})`,
+    rose: `rgba(255, 143, 199, ${alpha})`,
     silver: `rgba(232, 235, 255, ${alpha})`,
   };
 
@@ -93,8 +95,9 @@ function drawHalo(time) {
     Math.min(width, height) * 0.42 * pulse
   );
 
-  gradient.addColorStop(0, `rgba(255, 143, 199, ${0.12 * progress})`);
-  gradient.addColorStop(0.46, `rgba(155, 108, 255, ${0.08 * progress})`);
+  gradient.addColorStop(0, `rgba(49, 231, 255, ${0.15 * progress})`);
+  gradient.addColorStop(0.38, `rgba(31, 123, 255, ${0.12 * progress})`);
+  gradient.addColorStop(0.68, `rgba(255, 143, 199, ${0.06 * progress})`);
   gradient.addColorStop(1, "rgba(255, 255, 255, 0)");
   context.fillStyle = gradient;
   context.fillRect(0, 0, width, height);

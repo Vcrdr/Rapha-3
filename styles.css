@@ -8,6 +8,9 @@
   --violet-deep: #3b1a62;
   --silver: #e8ebff;
   --mint: #9ff5da;
+  --neon-blue: #1f7bff;
+  --cyan: #31e7ff;
+  --electric: #073cff;
   --glow: rgba(255, 143, 199, 0.52);
 }
 
@@ -26,9 +29,10 @@ body {
   overflow: hidden;
   color: var(--silver);
   background:
-    radial-gradient(circle at 50% 110%, rgba(141, 35, 80, 0.24), transparent 42%),
-    radial-gradient(circle at 20% 10%, rgba(155, 108, 255, 0.16), transparent 28%),
-    linear-gradient(135deg, var(--ink), #100915 44%, #05050a 100%);
+    radial-gradient(circle at 50% 104%, rgba(31, 123, 255, 0.2), transparent 40%),
+    radial-gradient(circle at 20% 10%, rgba(155, 108, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(255, 143, 199, 0.1), transparent 24%),
+    linear-gradient(135deg, #03040a, #080612 44%, #020207 100%);
   font-family: "Segoe UI", "Trebuchet MS", system-ui, sans-serif;
 }
 
@@ -38,9 +42,9 @@ body::before {
   content: "";
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 68px 68px;
+    linear-gradient(rgba(49, 231, 255, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 123, 255, 0.16) 1px, transparent 1px);
+  background-size: 76px 76px;
   mask-image: radial-gradient(circle at center, black, transparent 74%);
 }
 
@@ -50,11 +54,11 @@ body::after {
   content: "";
   pointer-events: none;
   background:
-    linear-gradient(transparent 50%, rgba(255, 255, 255, 0.018) 51%),
+    linear-gradient(transparent 50%, rgba(49, 231, 255, 0.055) 51%),
     radial-gradient(circle at center, transparent 50%, rgba(0, 0, 0, 0.42));
-  background-size: 100% 5px, 100% 100%;
+  background-size: 100% 4px, 100% 100%;
   mix-blend-mode: screen;
-  opacity: 0.52;
+  opacity: 0.64;
 }
 
 #particles {
@@ -100,8 +104,9 @@ body::after {
   line-height: 1.05;
   text-align: center;
   text-shadow:
-    0 0 26px rgba(255, 143, 199, 0.36),
-    0 0 60px rgba(155, 108, 255, 0.24);
+    0 0 22px rgba(255, 143, 199, 0.32),
+    0 0 46px rgba(49, 231, 255, 0.22),
+    0 0 70px rgba(7, 60, 255, 0.2);
   animation: breatheText 4s ease-in-out infinite;
 }
 
@@ -115,10 +120,11 @@ body::after {
   border-radius: 999px;
   color: white;
   background:
-    linear-gradient(135deg, rgba(255, 143, 199, 0.18), rgba(155, 108, 255, 0.16)),
+    linear-gradient(135deg, rgba(255, 143, 199, 0.16), rgba(31, 123, 255, 0.22)),
     rgba(255, 255, 255, 0.06);
   box-shadow:
     0 0 22px rgba(255, 143, 199, 0.32),
+    0 0 30px rgba(31, 123, 255, 0.22),
     inset 0 0 18px rgba(255, 255, 255, 0.08);
   cursor: pointer;
   font: 600 1rem/1 "Segoe UI", system-ui, sans-serif;
@@ -142,7 +148,7 @@ body::after {
   border-color: rgba(255, 209, 231, 0.82);
   box-shadow:
     0 0 36px rgba(255, 143, 199, 0.58),
-    0 0 72px rgba(155, 108, 255, 0.26),
+    0 0 72px rgba(31, 123, 255, 0.38),
     inset 0 0 24px rgba(255, 255, 255, 0.12);
   outline: none;
   transform: translateY(-2px) scale(1.03);
@@ -179,7 +185,7 @@ body.opened .bloom-scene {
   aspect-ratio: 1;
   border: 1px solid rgba(255, 209, 231, 0.1);
   border-radius: 50%;
-  filter: drop-shadow(0 0 34px rgba(255, 143, 199, 0.16));
+  filter: drop-shadow(0 0 34px rgba(31, 123, 255, 0.24));
   opacity: 0;
 }
 
@@ -189,7 +195,7 @@ body.opened .bloom-scene {
 
 .orbit-two {
   width: min(48vw, 460px);
-  border-color: rgba(155, 108, 255, 0.13);
+  border-color: rgba(49, 231, 255, 0.18);
   animation: orbitIn 6s ease forwards 1.3s, rotateSlow 15s linear infinite reverse;
 }
 
@@ -223,7 +229,7 @@ body.opened .doodle {
 .sparkle {
   top: 21%;
   right: 19%;
-  color: rgba(232, 235, 255, 0.88);
+  color: rgba(49, 231, 255, 0.9);
   font-size: clamp(1.4rem, 4vw, 3rem);
   animation-delay: 1.35s;
 }
@@ -231,7 +237,7 @@ body.opened .doodle {
 .bow {
   right: 12%;
   bottom: 24%;
-  color: rgba(159, 245, 218, 0.7);
+  color: rgba(31, 123, 255, 0.78);
   font-size: clamp(2rem, 5vw, 4rem);
   animation-delay: 1.7s;
 }
@@ -239,7 +245,7 @@ body.opened .doodle {
 .moon {
   bottom: 17%;
   left: 18%;
-  color: rgba(155, 108, 255, 0.82);
+  color: rgba(183, 144, 255, 0.86);
   font-size: clamp(2rem, 5vw, 4.4rem);
   animation-delay: 2s;
 }
@@ -261,14 +267,53 @@ body.opened .doodle {
 
 .bouquet {
   position: relative;
-  width: min(76vw, 390px);
-  height: min(72svh, 530px);
-  min-height: 430px;
+  width: min(86vw, 560px);
+  height: min(70svh, 500px);
+  min-height: 410px;
   filter:
-    drop-shadow(0 0 32px rgba(255, 143, 199, 0.26))
+    drop-shadow(0 0 18px rgba(49, 231, 255, 0.7))
+    drop-shadow(0 0 42px rgba(7, 60, 255, 0.44))
     drop-shadow(0 18px 62px rgba(0, 0, 0, 0.54));
   opacity: 0;
   transform: translateY(38px) scale(0.78);
+}
+
+.bouquet::before,
+.bouquet::after {
+  position: absolute;
+  left: 50%;
+  content: "";
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.bouquet::before {
+  bottom: 28px;
+  width: min(460px, 88%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(49, 231, 255, 0.9), transparent);
+  box-shadow:
+    0 -160px 0 rgba(49, 231, 255, 0.18),
+    0 -248px 0 rgba(31, 123, 255, 0.14),
+    0 0 18px rgba(49, 231, 255, 0.9);
+  opacity: 0;
+}
+
+.bouquet::after {
+  bottom: 52px;
+  width: min(390px, 74%);
+  height: 116px;
+  border: 1px solid rgba(49, 231, 255, 0.2);
+  border-top: 0;
+  background:
+    repeating-linear-gradient(0deg, rgba(49, 231, 255, 0.08) 0 1px, transparent 1px 7px),
+    linear-gradient(90deg, transparent, rgba(31, 123, 255, 0.08), transparent);
+  opacity: 0;
+}
+
+body.opened .bouquet::before,
+body.opened .bouquet::after {
+  animation: hudFade 1.6s ease forwards 2s;
 }
 
 body.opened .bouquet {
@@ -282,8 +327,12 @@ body.opened .bouquet {
   width: 7px;
   height: 260px;
   border-radius: 999px;
-  background: linear-gradient(#9ff5da, #3cb98d 58%, #1b745e);
-  box-shadow: 0 0 14px rgba(159, 245, 218, 0.24);
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 7px),
+    linear-gradient(#e8ebff, #31e7ff 38%, #073cff);
+  box-shadow:
+    0 0 12px rgba(49, 231, 255, 0.7),
+    0 0 26px rgba(7, 60, 255, 0.34);
   transform-origin: bottom;
   transform: scaleY(0);
 }
@@ -327,9 +376,14 @@ body.opened .stem {
   left: 50%;
   width: 54px;
   height: 26px;
-  border-radius: 100% 0 100% 0;
-  background: linear-gradient(135deg, rgba(159, 245, 218, 0.96), rgba(61, 168, 132, 0.88));
-  box-shadow: 0 0 18px rgba(159, 245, 218, 0.24);
+  border: 1px solid rgba(49, 231, 255, 0.7);
+  border-radius: 78% 10% 78% 18%;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 6px),
+    linear-gradient(135deg, rgba(232, 235, 255, 0.72), rgba(49, 231, 255, 0.55) 48%, rgba(7, 60, 255, 0.64));
+  box-shadow:
+    inset 0 0 16px rgba(255, 255, 255, 0.18),
+    0 0 18px rgba(49, 231, 255, 0.46);
   opacity: 0;
   transform: scale(0.25) rotate(20deg);
   transform-origin: 0 100%;
@@ -372,8 +426,8 @@ body.opened .leaf {
 
 .flower {
   position: absolute;
-  width: 118px;
-  height: 118px;
+  width: 132px;
+  height: 110px;
   opacity: 0;
   transform: scale(0.1);
 }
@@ -383,72 +437,85 @@ body.opened .flower {
 }
 
 .flower-center {
-  top: 36px;
-  left: calc(50% - 59px);
-  width: 148px;
-  height: 148px;
+  top: 18px;
+  left: calc(50% - 170px);
+  width: 340px;
+  height: 218px;
   animation-delay: 1.8s;
 }
 
 .flower-left {
-  top: 128px;
-  left: calc(50% - 160px);
+  top: 158px;
+  left: calc(50% - 210px);
+  width: 170px;
+  height: 128px;
   animation-delay: 2.05s;
 }
 
 .flower-right {
-  top: 132px;
-  right: calc(50% - 158px);
+  top: 164px;
+  right: calc(50% - 206px);
+  width: 170px;
+  height: 128px;
   animation-delay: 2.25s;
 }
 
 .flower-tiny {
-  top: 206px;
-  left: calc(50% - 52px);
-  width: 86px;
-  height: 86px;
+  top: 222px;
+  left: calc(50% - 70px);
+  width: 140px;
+  height: 96px;
   animation-delay: 2.45s;
 }
 
 .petal,
 .core {
   position: absolute;
-  top: 50%;
+  top: 58%;
   left: 50%;
   display: block;
-  transform-origin: 0 0;
+  transform-origin: 50% 92%;
 }
 
 .petal {
-  width: 48%;
-  height: 31%;
-  border-radius: 100% 12% 100% 18%;
+  width: 24%;
+  height: 62%;
+  border: 1px solid rgba(207, 246, 255, 0.72);
+  border-radius: 72% 72% 18% 18%;
+  clip-path: polygon(50% 0, 82% 26%, 100% 76%, 66% 100%, 50% 92%, 34% 100%, 0 76%, 18% 26%);
   background:
-    radial-gradient(circle at 24% 30%, rgba(255, 255, 255, 0.64), transparent 22%),
-    linear-gradient(135deg, var(--rose-light), var(--rose) 48%, var(--wine));
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.28) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 40% 24%, rgba(255, 255, 255, 0.72), transparent 20%),
+    linear-gradient(145deg, rgba(232, 235, 255, 0.88), rgba(49, 231, 255, 0.76) 38%, rgba(31, 123, 255, 0.88) 68%, rgba(7, 60, 255, 0.82));
   box-shadow:
-    inset -8px -6px 16px rgba(141, 35, 80, 0.22),
-    0 0 18px rgba(255, 143, 199, 0.34);
+    inset 0 0 18px rgba(255, 255, 255, 0.18),
+    inset 0 -18px 22px rgba(7, 60, 255, 0.28),
+    0 0 14px rgba(49, 231, 255, 0.82),
+    0 0 30px rgba(7, 60, 255, 0.48);
   opacity: 0;
-  transform: rotate(var(--angle)) translateX(0) scale(0.18);
+  transform: translate(-50%, 12%) rotate(var(--angle)) translateY(18%) scale(0.18);
 }
 
 .flower-center .petal {
+  width: 20%;
+  height: 68%;
   background:
-    radial-gradient(circle at 26% 30%, rgba(255, 255, 255, 0.72), transparent 22%),
-    linear-gradient(135deg, #ffe1ef, #ff8fc7 45%, #8d2350 100%);
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.3) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 42% 20%, rgba(255, 255, 255, 0.82), transparent 18%),
+    linear-gradient(145deg, rgba(246, 249, 255, 0.86), rgba(49, 231, 255, 0.78) 34%, rgba(31, 123, 255, 0.92) 68%, rgba(52, 27, 175, 0.9));
 }
 
 .flower-right .petal {
   background:
-    radial-gradient(circle at 24% 30%, rgba(255, 255, 255, 0.58), transparent 22%),
-    linear-gradient(135deg, #f3dcff, #b790ff 45%, #692e85 100%);
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.22) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 42% 20%, rgba(255, 255, 255, 0.68), transparent 18%),
+    linear-gradient(145deg, rgba(232, 235, 255, 0.78), rgba(183, 144, 255, 0.74) 42%, rgba(31, 123, 255, 0.86));
 }
 
 .flower-tiny .petal {
   background:
-    radial-gradient(circle at 24% 30%, rgba(255, 255, 255, 0.62), transparent 22%),
-    linear-gradient(135deg, #f7f0ff, #d6c0ff 48%, #8d6dff);
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0 1px, transparent 1px 5px),
+    linear-gradient(145deg, rgba(255, 209, 231, 0.8), rgba(49, 231, 255, 0.62), rgba(7, 60, 255, 0.78));
 }
 
 body.opened .petal {
@@ -456,33 +523,87 @@ body.opened .petal {
 }
 
 .p1 {
-  --angle: -90deg;
+  --angle: -78deg;
   animation-delay: 2.35s;
 }
 
 .p2 {
-  --angle: -30deg;
+  --angle: -52deg;
   animation-delay: 2.48s;
 }
 
 .p3 {
-  --angle: 30deg;
+  --angle: -28deg;
   animation-delay: 2.61s;
 }
 
 .p4 {
-  --angle: 90deg;
+  --angle: 0deg;
   animation-delay: 2.74s;
 }
 
 .p5 {
-  --angle: 150deg;
+  --angle: 28deg;
   animation-delay: 2.87s;
 }
 
 .p6 {
-  --angle: -150deg;
+  --angle: 52deg;
   animation-delay: 3s;
+}
+
+.p7 {
+  --angle: 78deg;
+  animation-delay: 3.12s;
+}
+
+.p8 {
+  --angle: -36deg;
+  width: 16%;
+  height: 52%;
+  animation-delay: 3.2s;
+}
+
+.p9 {
+  --angle: -16deg;
+  width: 16%;
+  height: 56%;
+  animation-delay: 3.28s;
+}
+
+.p10 {
+  --angle: 16deg;
+  width: 16%;
+  height: 56%;
+  animation-delay: 3.36s;
+}
+
+.p11 {
+  --angle: 36deg;
+  width: 16%;
+  height: 52%;
+  animation-delay: 3.44s;
+}
+
+.p12 {
+  --angle: -62deg;
+  width: 18%;
+  height: 46%;
+  animation-delay: 3.52s;
+}
+
+.p13 {
+  --angle: 62deg;
+  width: 18%;
+  height: 46%;
+  animation-delay: 3.6s;
+}
+
+.p14 {
+  --angle: 0deg;
+  width: 14%;
+  height: 48%;
+  animation-delay: 3.68s;
 }
 
 .flower-left .petal {
@@ -514,13 +635,17 @@ body.opened .petal {
 }
 
 .core {
-  width: 22%;
-  height: 22%;
+  top: 70%;
+  width: 16%;
+  height: 16%;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 34% 30%, #fff9da 0 16%, transparent 17%),
-    radial-gradient(circle, #ffe88f, #ffb86b 54%, #e86c8d 100%);
-  box-shadow: 0 0 16px rgba(255, 232, 143, 0.5);
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 5px),
+    radial-gradient(circle at 34% 30%, #ffffff 0 16%, transparent 17%),
+    radial-gradient(circle, #e8ebff, #31e7ff 54%, #073cff 100%);
+  box-shadow:
+    0 0 16px rgba(49, 231, 255, 0.9),
+    0 0 36px rgba(7, 60, 255, 0.58);
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.2);
 }
@@ -546,9 +671,11 @@ body.opened .core {
   width: 56px;
   height: 34px;
   content: "";
-  border: 1px solid rgba(255, 209, 231, 0.42);
-  background: linear-gradient(135deg, rgba(141, 35, 80, 0.95), rgba(255, 143, 199, 0.72));
-  box-shadow: 0 0 18px rgba(255, 143, 199, 0.38);
+  border: 1px solid rgba(49, 231, 255, 0.48);
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0 1px, transparent 1px 5px),
+    linear-gradient(135deg, rgba(7, 60, 255, 0.95), rgba(255, 143, 199, 0.64));
+  box-shadow: 0 0 18px rgba(49, 231, 255, 0.48);
 }
 
 .ribbon::before {
@@ -571,8 +698,8 @@ body.opened .core {
   width: 28px;
   height: 24px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #ffd1e7, #ff8fc7 58%, #8d2350);
-  box-shadow: 0 0 18px rgba(255, 143, 199, 0.58);
+  background: linear-gradient(135deg, #e8ebff, #31e7ff 52%, #073cff);
+  box-shadow: 0 0 18px rgba(49, 231, 255, 0.7);
   transform: translateX(-50%);
 }
 
@@ -593,7 +720,8 @@ body.opened .ribbon {
   text-align: center;
   text-shadow:
     0 0 22px rgba(255, 143, 199, 0.48),
-    0 0 50px rgba(155, 108, 255, 0.22);
+    0 0 46px rgba(49, 231, 255, 0.28),
+    0 0 50px rgba(7, 60, 255, 0.22);
   opacity: 0;
   transform: translate(-50%, 22px);
 }
@@ -717,17 +845,26 @@ body.opened .final-message {
 @keyframes petalBloom {
   0% {
     opacity: 0;
-    transform: rotate(var(--angle)) translateX(0) scale(0.12);
+    filter: blur(8px);
+    transform: translate(-50%, 38%) rotate(var(--angle)) translateY(20%) scale(0.08);
   }
 
   62% {
     opacity: 1;
-    transform: rotate(var(--angle)) translateX(18%) scale(1.12);
+    filter: blur(0);
+    transform: translate(-50%, -4%) rotate(var(--angle)) translateY(-18%) scale(1.1);
   }
 
   100% {
     opacity: 1;
-    transform: rotate(var(--angle)) translateX(16%) scale(1);
+    filter: blur(0);
+    transform: translate(-50%, 0) rotate(var(--angle)) translateY(-16%) scale(1);
+  }
+}
+
+@keyframes hudFade {
+  to {
+    opacity: 1;
   }
 }
 
