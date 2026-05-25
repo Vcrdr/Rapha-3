@@ -116,6 +116,29 @@ body::after {
   transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
 }
 
+.envelope::after {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  z-index: 10;
+  display: grid;
+  width: 78px;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(235, 214, 255, 0.5);
+  border-radius: 50%;
+  color: #fffaff;
+  content: "♡";
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.34), transparent 22%),
+    linear-gradient(135deg, rgba(255, 155, 214, 0.28), rgba(142, 92, 255, 0.44));
+  box-shadow:
+    0 0 22px rgba(215, 184, 255, 0.52),
+    inset 0 0 20px rgba(255, 255, 255, 0.09);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.35s ease, transform 0.5s ease;
+}
+
 .envelope-back,
 .envelope-paper,
 .envelope-flap,
@@ -137,20 +160,22 @@ body::after {
 }
 
 .envelope-paper {
-  inset: -3% 7% auto;
-  height: 82%;
+  inset: 12% 8% auto;
+  height: 60%;
   border: 1px solid rgba(106, 54, 138, 0.16);
   border-radius: 10px;
   background:
     repeating-linear-gradient(0deg, transparent 0 24px, var(--paper-line) 25px 26px),
     linear-gradient(145deg, #fffaff, #fbf2ff 62%, #f4e8ff);
   box-shadow: 0 0 26px rgba(215, 184, 255, 0.2);
+  opacity: 0;
+  transform: translateY(18%);
   transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease;
 }
 
 .envelope-flap {
-  z-index: 4;
-  height: 54%;
+  z-index: 8;
+  height: 62%;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
   transform-origin: top center;
   background:
@@ -161,7 +186,7 @@ body::after {
 }
 
 .envelope-pocket {
-  z-index: 5;
+  z-index: 6;
   clip-path: polygon(0 36%, 50% 78%, 100% 36%, 100% 100%, 0 100%);
   border: 1px solid rgba(235, 214, 255, 0.5);
   background:
@@ -173,7 +198,7 @@ body::after {
 .open-letter {
   position: absolute;
   inset: 0;
-  z-index: 7;
+  z-index: 9;
   border: 0;
   color: #fffaff;
   background: transparent;
@@ -319,13 +344,19 @@ body::after {
   transform: translate(-50%, 25%) scale(0.82);
 }
 
+.gift.is-open .envelope::after {
+  opacity: 0;
+  transform: translate(-50%, -60%) scale(0.7);
+}
+
 .gift.is-open .envelope-flap {
   transform: rotateX(180deg);
+  z-index: 3;
 }
 
 .gift.is-open .envelope-paper {
-  opacity: 0.34;
-  transform: translateY(-18%);
+  opacity: 0.46;
+  transform: translateY(-44%);
 }
 
 .gift.is-open .open-letter {
